@@ -1,0 +1,67 @@
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+
+/* Prices */
+p{ 
+    border-style: dashed;
+    border-color: gray;
+    margin: 10px;
+    background-color: wheat;
+    width: 150px;
+    /* How long should it take to reach the final state */
+    transition: width 3s; 
+
+    /* CSS Animations */
+    animation-name: multiplecolors;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+/* Name of animation */
+@keyframes colorswitch {
+    from {background-color: aqua;}
+    to {background-color: green;}
+}
+
+
+div {
+    animation-name: multiplecolors;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes multiplecolors {
+    0% {background-color: rgb(228, 157, 157);}
+    25% {background-color: rgb(228, 200, 157); color: red}
+    50% {background-color: rgb(100, 200, 157);}
+    75% {background-color: rgb(100, 200, 0);}
+    100% {background-color: rgb(228, 157, 157);}
+}
+
+/* 1. :hover */
+/* 2. transition */
+/* 3. CSS animation */
+
+p:hover{
+    /* Final width for hover effect */
+    width: 200px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    /* transition: 4s; */
+    
+    transition: 2s;
+}
+
+img:hover{
+    /* Final state */
+    width: 400px;
+    height: 400px
+}
